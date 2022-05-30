@@ -1,40 +1,20 @@
 /**
- * To jest program do rozpoznawania jaki jest trójkąt.
+
  */
 
 class Trojkaty {
     /**
-     * Główna funkcja programu.
+
      * 
      * @param {float} a - Długość pierwszego boku.
      * @param {float} b - Długość drugiego boku.
      * @param {float} c - Długość trzeciego boku.
      */
-    public static boolean czyProstokatny(float a, float b, float c) {
-        if (a * a + b * b == c * c)
-            return true;
-        if (b * b + c * c == a * a)
-            return true;
-        if (a * a + c * c == b * b)
-            return true;
-        return false;
-    }
 
-    public static void jakiTrojkat(float a, float b, float c) {
-        if (czyProstokatny(a, b, c)) {
-            System.out.println("Trójkąt prostokątny");
         }
-        if (a == b && b == c && a == c) {
-            System.out.println("Trójkąt równoboczny");
+        if (b == c) {
+            jednakowe++;
         }
-        if (a == b && b == c && a == c) {
-            System.out.println("Trójkąt równoboczny");
-        }
-        if (a == b || b == c || a == c) {
-            System.out.println("Trójkąt równoramienny");
-        }
-
-    }
 
     /** Wyświetla ekran pomocy */
     public static void pomoc() {
@@ -43,23 +23,6 @@ class Trojkaty {
         System.out.println("Uruchom z trzema argumentami liczbowymi - długość boków trójkąta");
     }
 
-    /**
-     * Funkcja zwraca ile par odcinków trójkąta ma jednakową długość.
-     * 
-     * @param {float} a - Długość pierwszego boku.
-     * @param {float} b - Długość drugiego boku.
-     * @param {float} c - Długość trzeciego boku.
-     */
-    public static int ileJednakowych(float a, float b, float c) {
-        int jednakowe = 0; // tutaj zliczamy ile jest jednakowych bokow
-        if (a == b) {
-            jednakowe++;
-        }
-        if (b == c) {
-            jednakowe++;
-        }
-        return jednakowe;
-    }
 
     /** Glowna funkcja */
     public static void main(String... args) {
